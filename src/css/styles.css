@@ -13,7 +13,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
+
 /* Header */
 .header {
     background-image: url('../img/solar.jpg');
@@ -23,7 +23,7 @@ body {
     color: white;
     text-align: center;
     padding: 20px 10px;             /* Ajuste de padding para dar espaçamento em dispositivos móveis */
-    opacity: 0.5rem;
+
 }
 
 .header h1 {
