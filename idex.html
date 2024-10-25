@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de Consumo de Energia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Economize com a Simulação de Consumo de Energia</h1>
+            <p>Descubra quanto você pode economizar ao escolher o melhor plano de energia para o seu papel.</p>
+            <a href="#simulacao" class="btn-primary">Simule Agora</a>
+        </div>
+    </header>
+
+    <!-- Descrição -->
+    <section class="description">
+        <div class="container">
+            <h2>Por que utilizar nossa simulação?</h2>
+            <p>Nosso sistema permite que você simule seu consumo de energia, oferecendo estimativas para vendedores, compradores e despachantes de forma clara e rápida. Escolha seu papel e saiba exatamente quanto vai pagar.</p>
+            <div class="benefits">
+                <div class="benefit-item">
+                    <h3>Fácil e Rápido</h3>
+                    <p>Insira seus dados e obtenha resultados instantâneos.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Precisão</h3>
+                    <p>Simulação baseada em valores reais do mercado.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Escolha Inteligente</h3>
+                    <p>Descubra a melhor tarifa para o seu consumo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Simulação -->
+    <section id="simulacao" class="simulation">
+        <div class="container">
+            <h2>Simule seu Consumo</h2>
+            <div class="form-section">
+                <label for="role">Selecione seu papel:</label>
+                <select id="role">
+                    <option value="vendedor">Vendedor</option>
+                    <option value="comprador">Comprador</option>
+                    <option value="despachante">Despachante</option>
+                </select>
+            </div>
+            <div class="form-section">
+                <label for="consumo">Consumo de energia (em kWh):</label>
+                <input type="number" id="consumo" placeholder="Digite o consumo em kWh" />
+            </div>
+            <button onclick="simular()" class="btn-primary">Simular Consumo</button>
+
+            <div class="result" id="resultado"></div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Simulação de Consumo de Energia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
