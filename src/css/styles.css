@@ -107,49 +107,39 @@ html {
     background-color: #e6e6e6;
 }
 
-/* Estilos da Galeria */
+/* Layout da Galeria */
 .gallery {
-    position: relative;
-    max-width: 800px; /* Ajuste conforme necessário */
-    margin: auto;
-    overflow: hidden; /* Oculta imagens fora da área visível */
-}
-
-.gallery-container {
+    padding: 60px 0;
+    background-color: #f4f4f4;
     display: flex;
-    transition: transform 0.5s ease; /* Transição suave */
+    justify-content: center;
 }
 
-.gallery-image {
-    min-width: 100%; /* Cada imagem ocupa 100% da largura da galeria */
-    opacity: 0; /* Oculta imagens inicialmente */
-    transition: opacity 0.5s ease; /* Transição suave para a opacidade */
+.gallery .container {
+    display: flex;
+    gap: 20px;
 }
 
-.gallery-image.active {
-    opacity: 1; /* Mostra a imagem ativa */
+.gallery-item {
+    flex: 1;
+    overflow: hidden;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateX(100px); /* Posição inicial para animação */
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-button.prev,
-button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-button.prev {
-    left: 10px; /* Alinha o botão anterior à esquerda */
+/* Classe acionada para o efeito de deslize */
+.gallery-item.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
-button.next {
-    right: 10px; /* Alinha o botão seguinte à direita */
-}
 
 /* Descrição */
 .description {
