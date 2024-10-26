@@ -12,7 +12,7 @@
 
     <!-- Navegação -->
     <nav class="navbar">
-        <div class="container-bg ">
+        <div class="container-bg">
             <ul>
                 <li><a href="#header">Início</a></li>
                 <li><a href="#description">Descrição</a></li>
@@ -23,7 +23,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <h1>SolUnção</h1>
             <p>A ponte para um futuro sustentável e acessível.</p>
@@ -32,7 +32,7 @@
     </header>
 
     <!-- Descrição -->
-    <section class="description">
+    <section id="description" class="description">
         <div class="container">
             <h2>Por que utilizar nosso serviço?</h2>
             <p>Oferecemos um serviço de intermediação que facilita o acesso à energia sustentável, eliminando a
@@ -53,6 +53,16 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container gallery-container">
+            <img src="./src/img/img1.jpg" alt="Imagem 1" class="gallery-image active">
+            <img src="./src/img/img2.jpg" alt="Imagem 2" class="gallery-image">
+            <img src="./src/img/img3.jpg" alt="Imagem 3" class="gallery-image">
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </section>
 
     <!-- Formulário de Simulação -->
@@ -78,13 +88,14 @@
     </section>
 
     <!-- Rodapé -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="container">
             <p>© 2024 Simulação de Consumo de Energia. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <script src="./src/Js/app.js"></script>
+    <script src="./src/Js/galeria.js"></script>
 </body>
 
 </html>

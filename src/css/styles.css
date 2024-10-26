@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -12,15 +12,13 @@ body {
     color: #333;
 }
 
-html{
-    font-size: 62,5%;
+html {
+    font-size: 62.5%; /* Corrigido para ponto */
 }
-
-
 
 .container {
     max-width: 1200px;
-    margin: 50px;
+    margin: 50px auto; /* Adicionado 'auto' para centralização */
     padding: 0 20px;
 }
 
@@ -36,7 +34,7 @@ html{
 .navbar .container {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px; 
+    padding: 10px 20px;
 }
 
 .navbar ul {
@@ -54,8 +52,6 @@ html{
     transition: background 0.3s ease;
 }
 
-
-
 .navbar ul li a:hover {
     background-color: #4CAF50;
     border-radius: 5px;
@@ -63,7 +59,7 @@ html{
 
 /* Header */
 .header {
-    position: relative; 
+    position: relative;
     background: url('../img/solar.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
@@ -79,12 +75,12 @@ html{
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1; 
+    z-index: 1;
 }
 
 .header .container {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
 }
 
 .header h1 {
@@ -109,6 +105,50 @@ html{
 
 .btn-primary:hover {
     background-color: #e6e6e6;
+}
+
+/* Estilos da Galeria */
+.gallery {
+    position: relative;
+    max-width: 800px; /* Ajuste conforme necessário */
+    margin: auto;
+    overflow: hidden; /* Oculta imagens fora da área visível */
+}
+
+.gallery-container {
+    display: flex;
+    transition: transform 0.5s ease; /* Transição suave */
+}
+
+.gallery-image {
+    min-width: 100%; /* Cada imagem ocupa 100% da largura da galeria */
+    opacity: 0; /* Oculta imagens inicialmente */
+    transition: opacity 0.5s ease; /* Transição suave para a opacidade */
+}
+
+.gallery-image.active {
+    opacity: 1; /* Mostra a imagem ativa */
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button.prev {
+    left: 10px; /* Alinha o botão anterior à esquerda */
+}
+
+button.next {
+    right: 10px; /* Alinha o botão seguinte à direita */
 }
 
 /* Descrição */
@@ -216,5 +256,13 @@ button:hover {
     .benefit-item {
         width: 100%;
         margin-bottom: 20px;
+    }
+    
+    .gallery-container {
+        flex-direction: column; /* Adiciona empilhamento vertical para dispositivos menores */
+    }
+
+    .gallery-image {
+        width: 100%; /* Garante que as imagens ocupem 100% da largura */
     }
 }
