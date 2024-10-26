@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /* Estilos Globais */
 body {
     font-family: 'Arial', sans-serif;
@@ -7,23 +12,79 @@ body {
     color: #333;
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
+html{
+    font-size: 62,5%;
 }
 
 
+
+.container {
+    max-width: 1200px;
+    margin: 50px;
+    padding: 0 20px;
+}
+
+/* Navegação */
+.navbar {
+    width: 100%;
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px; 
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
+
+
+
+.navbar ul li a:hover {
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
 /* Header */
 .header {
-    background-image: url('../img/solar.jpg');
-    background-size: cover;         /* Preenche a área do header */
-    background-position: center;    /* Centraliza a imagem */
-    background-repeat: no-repeat;   /* Evita repetição da imagem */
+    position: relative; 
+    background: url('../img/solar.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
-    padding: 20px 10px;             /* Ajuste de padding para dar espaçamento em dispositivos móveis */
+    padding: 60px 0;
+    overflow: hidden;
+}
 
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+}
+
+.header .container {
+    position: relative;
+    z-index: 2; 
 }
 
 .header h1 {
