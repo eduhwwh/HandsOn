@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>SolUnção</title>
     <link rel="stylesheet" href="./src/css/styles.css">
 </head>
@@ -27,9 +28,13 @@
         <div class="container">
             <h1>SolUnção</h1>
             <p>A ponte para um futuro sustentável e acessível.</p>
-            <!-- <a href="#simulacao" class="btn-primary">Simule Agora</a>-->
+            <a href="#simulacao" class="btn-primary">Simule Agora</a>
+        </div>
+        <div class="scroll-indicator">
+            <img src="https://img.icons8.com/material-outlined/24/ffffff/chevron-down.png" alt="Mais Conteúdo" />
         </div>
     </header>
+    
 
     <!-- Descrição -->
     <section id="description" class="description">
@@ -40,23 +45,51 @@
                 limpa de maneira conveniente e responsável.</p>
             <div class="benefits">
                 <div class="benefit-item">
+                    <i class="fas fa-bolt icon"></i>
                     <h3>Flexibilidade</h3>
                     <p>Oferecemos planos mensais e anuais para atender às necessidades e orçamentos dos clientes.</p>
+                    <ul>
+                        <li>Planos ajustáveis conforme consumo</li>
+                        <li>Opções com contrato curto e longo</li>
+                        <li>Sem fidelidade inicial</li>
+                    </ul>
                 </div>
                 <div class="benefit-item">
+                    <i class="fas fa-clock icon"></i>
                     <h3>Economia de Tempo e Recursos</h3>
                     <p>Os clientes economizam tempo ao nos confiar a gestão da energia sustentável e focam em suas atividades.</p>
+                    <ul>
+                        <li>Redução de custos administrativos</li>
+                        <li>Atendimento personalizado</li>
+                        <li>Monitoramento de consumo em tempo real</li>
+                    </ul>
                 </div>
                 <div class="benefit-item">
+                    <i class="fas fa-handshake icon"></i>
                     <h3>Simplicidade e Conveniência</h3>
                     <p>Cuidamos da burocracia para que os clientes aproveitem energia limpa.</p>
+                    <ul>
+                        <li>Sem necessidade de instalação</li>
+                        <li>Processo de adesão 100% digital</li>
+                        <li>Suporte dedicado</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="gallery">
+        <h2 class="gallery-title">Inspiração em Energia Limpa</h2> <!-- Título da Galeria -->
         <div class="container">
+            <div class="gallery-item">
+                <img src="./src/img/img2.jpg" alt="Imagem 1" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="./src/img/img5.jpg" alt="Imagem 2" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="./src/img/img3.jpg" alt="Imagem 3" class="gallery-image">
+            </div>
             <div class="gallery-item">
                 <img src="./src/img/img2.jpg" alt="Imagem 1" class="gallery-image">
             </div>
@@ -69,6 +102,7 @@
         </div>
     </section>
     
+    
 
     </section>
 
@@ -78,7 +112,7 @@
             <h2>Simule seu Consumo</h2>
             <div class="form-section">
                 <label for="role">Selecione seu papel:</label>
-                <select id="role">
+                <select id="role" class="form-input">
                     <option value="vendedor">Vendedor</option>
                     <option value="comprador">Comprador</option>
                     <option value="despachante">Despachante</option>
@@ -86,20 +120,32 @@
             </div>
             <div class="form-section">
                 <label for="consumo">Consumo de energia (em kWh):</label>
-                <input type="number" id="consumo" placeholder="Digite o consumo em kWh" />
+                <input type="number" id="consumo" class="form-input" placeholder="Digite o consumo em kWh" />
             </div>
             <button onclick="simular()" class="btn-primary">Simular Consumo</button>
-
             <div class="result" id="resultado"></div>
         </div>
     </section>
+    
+    
+    
+
 
     <!-- Rodapé -->
     <footer class="footer" id="footer">
         <div class="container">
-            <p>© 2024 Simulação de Consumo de Energia. Todos os direitos reservados.</p>
+            <div class="footer-content">
+                <p>© 2024 SolUnção. Todos os direitos reservados.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/material-outlined/24/ffffff/facebook-new.png" alt="Facebook" /></a>
+                    <a href="#" aria-label="Twitter"><img src="https://img.icons8.com/material-outlined/24/ffffff/twitter-squared.png" alt="Twitter" /></a>
+                    <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/material-outlined/24/ffffff/instagram-new.png" alt="Instagram" /></a>
+                </div>
+            </div>
         </div>
     </footer>
+    
+    
 
     <script src="./src/Js/app.js"></script>
     <script src="./src/Js/galeria.js"></script>
