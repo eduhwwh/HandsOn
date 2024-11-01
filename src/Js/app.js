@@ -35,3 +35,7 @@ function simular() {
         </div>
     `;
 }
+
+function toggleMenu() {
+    document.querySelector('.navbar').classList.toggle('active');
+}

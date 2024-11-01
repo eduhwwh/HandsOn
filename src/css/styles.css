@@ -12,14 +12,14 @@ body {
 }
 
 html {
-    font-size: 62.5%; /* Corrigido para ponto */
+    font-size: 62.5%;
 }
 
 
 
 .container {
     max-width: 1200px;
-    margin: 50px auto; /* Centralização */
+    margin: 50px auto; 
     padding: 0 20px;
 }
 
@@ -56,6 +56,13 @@ html {
 .navbar ul li a:hover {
     background-color: #4CAF50;
     border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
 }
 /* Navegação */
 
@@ -128,6 +135,8 @@ html {
 .gallery {
     padding: 60px 0;
     background-color: #f4f4f4;
+    padding-bottom: 40px; 
+
 }
 
 .gallery .container {
@@ -305,6 +314,22 @@ button:hover {
     margin-right: auto; 
 }
 
+.result, .result-box {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 1.2rem;
+    color: #333;
+    border-radius: 5px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.result h3, .result-box h3 {
+    color: #4CAF50;
+}
+
 .result-box {
     margin-top: 20px;
     padding: 20px;
@@ -357,22 +382,68 @@ button:hover {
 @media (max-width: 768px) {
     .benefits {
         flex-direction: column;
+        align-items: center;
     }
 
     .benefit-item {
-        width: 100%;
+        width: 90%; 
         margin-bottom: 20px;
+        padding: 20px; 
+        min-height: auto;
     }
 
     .gallery .container {
         display: grid;
-        grid-template-columns: 1fr; /* Muda para uma coluna */
+        grid-template-columns: 1fr; 
         gap: 20px; 
         align-items: center;
     }
 
     .gallery-item img {
-        width: 100%; /* Garante que as imagens ocupem 100% da largura */
-        height: auto; /* Mantém a proporção da imagem */
+        width: 100%; 
+        height: auto; 
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .navbar ul {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .navbar ul li a {
+        padding: 15px 0;
+        width: 100%;
+    }
+    .navbar.active ul {
+        display: flex; 
+    }
+}
+
+@media (max-width: 768px) {
+    .form-section {
+        margin-bottom: 10px;
+    }
+
+    .form-input, .result-box {
+        width: 90%;
+        max-width: 100%; 
+        font-size: 1.4rem; 
+        padding: 12px; 
+    }
+
+    button {
+        width: 90%; 
+        font-size: 1.4rem; 
+        padding: 12px;
     }
 }
