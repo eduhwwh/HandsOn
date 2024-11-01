@@ -305,6 +305,23 @@ button:hover {
     margin-right: auto; 
 }
 
+.result-box {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #e0f7e9;
+    font-size: 1.2rem;
+    color: #333;
+    border-radius: 5px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.result-box h3 {
+    color: #4CAF50;
+}
+
+
 /* Rodapé */
 .footer {
     background-color: #333; 
